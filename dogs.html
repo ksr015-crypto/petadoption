@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cats Available for Adoption</title>
+<link rel="stylesheet" href="styling.css">
+<style>
+nav ul li a {
+  text-decoration: none;
+  color: white; 
+  padding: 8px 15px;
+  display: block;
+  transition: 0.3s;}
+
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: white;
+  color: #ff7f50; }
+
+
+nav ul li a.active {
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 4px;}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;   
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+
+.dropdown-content a {
+  color: #ff7f50;   
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;}
+
+.dropdown-content a:hover {
+  background-color: #ffe5d5;  
+  color: #ff7f50;}
+
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+
+.dropdown:hover > .dropbtn {
+  background-color: white;
+  color: #ff7f50;}
+
+.dropdown .dropbtn.active {
+  background-color: white;
+  color: #ff7f50;
+  border-radius: 4px;}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo"><a href="home.html"><b>🐾 PetMates</b></a></div>
+<ul>
+<li><a href="home.html" class="active">Home</a></li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Menu ▾</a>
+<div class="dropdown-content">
+<a href="adoption.html">Adoption Information</a>
+<a href="availablepets.html">Available Pets</a>
+<a href="stories.html">Success Stories</a>
+<a href="faqs.html">FAQs</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Donate ▾</a>
+<div class="dropdown-content">
+<a href="adoptform.html">Adoption Form</a>
+<a href="donatepets.html">Donate Pets</a>
+</div>
+</li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="adoptform.html" class="btn adopt-btn">Adopt Now</a>
+</nav>
+</header>
+
+<div class="scroll-text">
+<p>🐾 Adopt don't Buy! Saving lives, one paw at a time. 🐾</p>
+</div>
+
+<section class="pet-list">
+<h2>Meet Our Dogs 🐶</h2>
+<div class="pet-gallery">
+<div class="pet-card">
+<img src="labpup.jpg" alt="Buddy the Dog">
+<h3>Buddy</h3>
+<p>3 Weeks | Labrador | Loyal & friendly</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="german.webp" alt="Rocky the Dog">
+<h3>Rocky</h3>
+<p>3 Years | German Shepherd | Protective & smart</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="beagle.webp" alt="Tom the Dog">
+<h3>Tom</h3>
+<p>1 Year | Beagle | Energetic & playful</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="pug.jpeg" alt="Pugsie the Dog">
+<h3>Pugsie</h3>
+<p>1 Year | Pug | Happy & people-pleasing</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="localdog.jpeg" alt="Rusty the Dog">
+<h3>Rusty</h3>
+<p>1 Year | Local Mix | Affectionate & loyal</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="huskyyy.jpg" alt="Woofy the Dog">
+<h3>Woofy</h3>
+<p>2 Years | Husky | Calm & watchful</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="goldenn.jpeg" alt="Suzie the Dog">
+<h3>Suzie</h3>
+<p>1 Year | Golden Retriever | Eager & joyful</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="rott.webp" alt="Jimmy the Dog">
+<h3>Jimmy</h3>
+<p>1 Year | Rottweiler | Observant and clever</p><br>
+<p>Male</p>
+</div>
+  </div>
+</section>
+
+<footer padding:20px; font-family:Arial, sans-serif;>
+<p style="font-size:18px; margin:5px 0;">🐾 Explore our pets and find your forever companion today.</p>
+<p>Follow us on:</p>
+<div style="margin:15px 0;">
+<a href="https://www.instagram.com" target="_blank">
+<img src="instalogo.jpeg" alt="Instagram" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.facebook.com" target="_blank">
+<img src="fbb.png" alt="Facebook" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+<img src="linkedin.png" alt="LinkedIn" width="30" style="margin:0 8px;">
+</a>
+</div>
+<p style="margin:10px 0; font-size:14px;">© 2025 PetMates | All Rights Reserved</p>
+</footer>
+
+<script>
+let currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".dropdown-content a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active"); 
+link.closest(".dropdown").querySelector(".dropbtn").classList.add("active"); }});
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active");}});
+
+</script>
+
+</body>
+</html>

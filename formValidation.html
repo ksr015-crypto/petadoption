@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Application Form</title>
+<style>
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<form id="jobForm" onsubmit="return ValidateForm()">
+
+  <h1 align="center">Job Application Form</h1><br>
+
+  
+  <label for="fname">Full Name: </label>
+  <input type="text" id="fname">
+  <span id="nameError" class="error"></span><br><br>
+
+  
+  <label for="email">Email: </label>
+  <input type="text" id="email">
+  <span id="emailError" class="error"></span><br><br>
+
+ 
+  <label for="cnumber">Contact Number: </label>
+  <input type="text" id="cnumber" placeholder="0832-XXXXXX">
+  <span id="cnumberError" class="error"></span><br><br>
+
+  
+  <label for="exp">Years of Experience: </label>
+  <input type="number" id="exp">
+  <span id="experienceError" class="error"></span><br><br>
+
+  
+  <label for="salary">Expected Salary: </label>
+  <input type="text" id="salary">
+  <span id="salaryError" class="error"></span><br><br>
+
+  
+  <label for="resume">Resume Upload: </label>
+  <input type="file" id="resume">
+  <span id="resumeError" class="error"></span><br><br>
+
+  
+  <label for="terms">Accept Terms & Conditions </label>
+  <input type="checkbox" id="terms">
+  <span id="termsError" class="error"></span><br><br>
+
+  
+  <input type="submit" id="submit" value="Submit">
+
+</form>
+
+<script>
+function ValidateForm() {
+  let valid = true;
+
+  
+  document.getElementById("nameError").innerHTML = "";
+  document.getElementById("emailError").innerHTML = "";
+  document.getElementById("cnumberError").innerHTML = "";
+  document.getElementById("experienceError").innerHTML = "";
+  document.getElementById("salaryError").innerHTML = "";
+  document.getElementById("resumeError").innerHTML = "";
+  document.getElementById("termsError").innerHTML = "";
+
+  
+  let fname = document.getElementById("fname").value.trim();
+  let namePattern = /^[a-zA-Z\s]{3,}$/;
+  if (fname === "" || !namePattern.test(fname)) {
+    document.getElementById("nameError").innerHTML = "Enter a valid name (min 3 letters, alphabets only).";
+    valid = false;
+  }
+
+  
+  let email = document.getElementById("email").value.trim();
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|in)$/;
+  if (email === "" || !emailPattern.test(email)) {
+    document.getElementById("emailError").innerHTML = "Enter a valid email (example@domain.com).";
+    valid = false;
+  }
+
+  
+  let cnumber = document.getElementById("cnumber").value.trim();
+  let phonePattern = /^0832-\d{6}$/;
+  if (cnumber === "" || !phonePattern.test(cnumber)) {
+    document.getElementById("cnumberError").innerHTML = "Enter valid Goa landline (0832-XXXXXX).";
+    valid = false;
+  }
+
+
+  let exp = document.getElementById("exp").value.trim();
+  if (exp === "" || isNaN(exp) || exp < 0) {
+    document.getElementById("experienceError").innerHTML = "Enter valid experience (0 or more).";
+    valid = false;
+  }
+
+ 
+  let salary = document.getElementById("salary").value.trim();
+  if (salary === "" || isNaN(salary) || salary <= 0) {
+    document.getElementById("salaryError").innerHTML = "Enter valid salary (greater than 0).";
+    valid = false;
+  }
+
+  
+  let resume = document.getElementById("resume").value.trim();
+  let filePattern = /\.(pdf|doc|docx)$/i;
+  if (resume === "" || !filePattern.test(resume)) {
+    document.getElementById("resumeError").innerHTML = "Upload valid file (PDF, DOC, DOCX).";
+    valid = false;
+  }
+
+  
+  if (!document.getElementById("terms").checked) {
+    document.getElementById("termsError").innerHTML = "You must accept terms.";
+    valid = false;
+  }
+
+  return valid; 
+}
+</script>
+
+</body>
+</html>
+
+

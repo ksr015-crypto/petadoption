@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Available for Adoption</title>
+<link rel="stylesheet" href="styling.css">
+<style>
+nav ul li a {
+  text-decoration: none;
+  color: white; 
+  padding: 8px 15px;
+  display: block;
+  transition: 0.3s;}
+
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: white;
+  color: #ff7f50; }
+
+
+nav ul li a.active {
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 4px;}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;   
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+
+.dropdown-content a {
+  color: #ff7f50;   
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;}
+
+.dropdown-content a:hover {
+  background-color: #ffe5d5;  
+  color: #ff7f50;}
+
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+
+.dropdown:hover > .dropbtn {
+  background-color: white;
+  color: #ff7f50;}
+
+.dropdown .dropbtn.active {
+  background-color: white;
+  color: #ff7f50;
+  border-radius: 4px;}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo"><a href="home.html"><b>🐾 PetMates</b></a></div>
+<ul>
+<li><a href="home.html" class="active">Home</a></li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Menu ▾</a>
+<div class="dropdown-content">
+<a href="adoption.html">Adoption Information</a>
+<a href="availablepets.html">Available Pets</a>
+<a href="stories.html">Success Stories</a>
+<a href="faqs.html">FAQs</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Donate ▾</a>
+<div class="dropdown-content">
+<a href="adoptform.html">Adoption Form</a>
+<a href="donatepets.html">Donate Pets</a>
+</div>
+</li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="adoptform.html" class="btn adopt-btn">Adopt Now</a>
+</nav>
+</header>
+
+<div class="scroll-text">
+<p>🐾 Adopt don't Buy! Saving lives, one paw at a time. 🐾</p>
+</div>
+
+<section>
+<h2>Available Pets</h2>
+<p>Meet our adorable pets who are waiting for their forever homes. Each of them has a unique story and personality, ready to bring joy to your life.</p><br>
+  
+<div class="pet-gallery">
+<div class="pet">
+<img src="labmix.jpg" alt="Pet Image 1"style="width:100%; max-width:300px; border-radius:8px;">
+<h3>Buddy</h3>
+<p>Breed: Labrador Mix</p>
+<p>Age: 2 Years</p>
+<p>Male</p>
+<p>Friendly, playful, and loves outdoor adventures.</p>
+</div>
+    
+<div class="pet">
+<img src="siamesee.jpg" alt="Pet Image" style="width:100%; max-width:300px; border-radius:8px;">
+<h3>Luna</h3>
+<p>Breed: Siamese</p>
+<p>Age: 1 Year</p>
+<p>Female</p>
+<p>Gentle and affectionate, perfect lap companion.</p>
+</div>
+    
+<div class="pet">
+<img src="https://i.pinimg.com/736x/75/34/64/753464402d04f960e421f9c6461cc4cc.jpg" alt="Pet Image"style="width:100%; max-width:400px; border-radius:8px;">
+<h3>Max</h3>
+<p>Breed: German Shepherd</p>
+<p>Age: 3 Years</p>
+<p>Male</p>
+<p>Loyal and protective, loves to play fetch.</p>
+</div>
+    
+<div class="pet">
+<img src="tabbbyy.jpg"alt="Pet Image" style="width: 100%; max-width: 300px; border-radius: 8px;">
+<h3>Milo</h3>
+<p>Breed: Tabby</p>
+<p>Age: 6 Months</p>
+<p>Female</p>
+<p>Curious, playful kitten who loves exploring.</p>
+</div>
+
+<div class="pet-gallery">
+<div class="pet-card">
+<img src="siaamese.jpeg" alt="Luna the Cat">
+<h3>Luna</h3>
+<p>2 Weeks | Siamese | Playful & affectionate</p><br>
+<p>Female</p>
+</div>
+<div class="pet-card">
+<img src="persian.webp" alt="Milo the Cat">
+<h3>Milo</h3>
+<p>2 Years | Persian | Calm & cuddly</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="tabby.webp" alt="Bella the Cat">
+<h3>Bella</h3>
+<p>3 Years | Tabby | Curious & energetic</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="ragdoll.jpeg" alt="Tina the Cat">
+<h3>Tina</h3>
+<p>1 Year | Ragdoll | Friendly and loving</p><br>
+<p>Female</p>
+</div>
+<div class="pet-card">
+<img src="american.jpg" alt="Lia the Cat">
+<h3>Lia</h3>
+<p>3 Years | American Shorthair | Smart and cuddly </p><br>
+<p>Female</p>
+</div>
+<div class="pet-card">
+<img src="calico.jpg" alt="Cookie the Cat">
+<h3>Cookie</h3>
+<p>3 weeks | Calico | Bold and fearless </p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="bengali.jpg" alt="Fufi the Cat">
+<h3>Fufi</h3>
+<p>3 weeks | Bengal | Active and loving </p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="british.jpg" alt="Mimi the Cat">
+<h3>Mimi</h3>
+<p>3 weeks | British Shorthair | Cunning and playful </p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-gallery">
+<div class="pet-card">
+<img src="labpup.jpg" alt="Buddy the Dog">
+<h3>Buddy</h3>
+<p>3 Weeks | Labrador | Loyal & friendly</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="german.webp" alt="Rocky the Dog">
+<h3>Rocky</h3>
+<p>3 Years | German Shepherd | Protective & smart</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="beagle.webp" alt="Tom the Dog">
+<h3>Tom</h3>
+<p>1 Year | Beagle | Energetic & playful</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="pug.jpeg" alt="Pugsie the Dog">
+<h3>Pugsie</h3>
+<p>1 Year | Pug | Happy & people-pleasing</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="localdog.jpeg" alt="Rusty the Dog">
+<h3>Rusty</h3>
+<p>1 Year | Local Mix | Affectionate & loyal</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="huskyyy.jpg" alt="Woofy the Dog">
+<h3>Woofy</h3>
+<p>2 Years | Husky | Calm & watchful</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="goldenn.jpeg" alt="Suzie the Dog">
+<h3>Suzie</h3>
+<p>1 Year | Golden Retriever | Eager & joyful</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="rott.webp" alt="Jimmy the Dog">
+<h3>Jimmy</h3>
+<p>1 Year | Rottweiler | Observant and clever</p><br>
+<p>Male</p>
+</div>
+</div>
+
+<div class="pet-gallery">
+<div class="pet-card">
+<img src="parrot3.jpeg" alt="Polly the Parrot">
+<h3>Polly</h3>
+<p>3 Years | Parrot | Smart & talkative</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="parrot4.jpeg" alt="Rio the Parrot">
+<h3>Rio</h3>
+<p>2 Years | Parrot | Colorful & cheerful</p><br>
+<p>Male</p>
+</div>
+<div class="pet-card">
+<img src="parrot5.jpeg" alt="Kiwi the Parrot">
+<h3>Kiwi</h3>
+<p>4 Years | Parrot | Affectionate & playful</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="parrot6.webp" alt="Oliver the Parrot">
+<h3>Oliver</h3>
+<p>2 Years | Parrot |  Incredibly affectionate & trainable</p><br>
+<p>Male</p>
+</div>
+
+<div class="pet-card">
+<img src="parrot7.jpg" alt="Peanut the Parrot">
+<h3>Peanut</h3>
+<p>1 Year | Parrot | Clever & sensitive</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="parrot8.jpg" alt="Cindy the Parrot">
+<h3>Cindy</h3>
+<p>4 Years | Parrot | Sweet & melodious</p><br>
+<p>Female</p>
+</div>
+
+<div class="pet-card">
+<img src="parrot9.jpeg" alt="Julie the Parrot">
+<h3>Julie</h3>
+<p>4 Years | Parrot | Cheerful & cuddly</p><br>
+<p>Male</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer padding:20px; font-family:Arial, sans-serif;>
+<p style="font-size:18px; margin:5px 0;">🐾 Explore our pets and find your forever companion today.</p>
+<p>Follow us on:</p>
+<div style="margin:15px 0;">
+<a href="https://www.instagram.com" target="_blank">
+<img src="instalogo.jpeg" alt="Instagram" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.facebook.com" target="_blank">
+<img src="fbb.png" alt="Facebook" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+<img src="linkedin.png" alt="LinkedIn" width="30" style="margin:0 8px;">
+</a>
+</div>
+<p style="margin:10px 0; font-size:14px;">© 2025 PetMates | All Rights Reserved</p>
+</footer>
+<script>
+let currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".dropdown-content a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active"); 
+link.closest(".dropdown").querySelector(".dropbtn").classList.add("active"); }});
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active");}});
+
+</script>
+</body>
+</html>

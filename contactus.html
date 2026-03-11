@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styling.css">
+<style>
+nav ul li a {
+  text-decoration: none;
+  color: white; 
+  padding: 8px 15px;
+  display: block;
+  transition: 0.3s;}
+
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: white;
+  color: #ff7f50; }
+
+
+nav ul li a.active {
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 4px;}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;   
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+
+.dropdown-content a {
+  color: #ff7f50;   
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;}
+
+.dropdown-content a:hover {
+  background-color: #ffe5d5;  
+  color: #ff7f50;}
+
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+
+.dropdown:hover > .dropbtn {
+  background-color: white;
+  color: #ff7f50;}
+
+.dropdown .dropbtn.active {
+  background-color: white;
+  color: #ff7f50;
+  border-radius: 4px;}
+
+form {
+max-width: 600px;
+margin: 20px auto;
+text-align: left; 
+font-family: Arial, sans-serif; }
+.error { 
+color: red; font-size: 14px; }
+
+.success { 
+color: green; font-size: 16px; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo"><a href="home.html"><b>🐾 PetMates</b></a></div>
+<ul>
+<li><a href="home.html" class="active">Home</a></li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Menu ▾</a>
+<div class="dropdown-content">
+<a href="adoption.html">Adoption Information</a>
+<a href="availablepets.html">Available Pets</a>
+<a href="stories.html">Success Stories</a>
+<a href="faqs.html">FAQs</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Donate ▾</a>
+<div class="dropdown-content">
+<a href="adoptform.html">Adoption Form</a>
+<a href="donatepets.html">Donate Pets</a>
+</div>
+</li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="adoptform.html" class="btn adopt-btn">Adopt Now</a>
+</nav>
+</header>
+
+<div class="scroll-text">
+<p>🐾 Adopt don't Buy! Saving lives, one paw at a time. 🐾</p>
+</div>
+
+<section>
+<h2>Contact Us</h2>
+<p>We’d love to hear from you! Reach out to us via any of the methods below:</p>
+
+<div class="why-cards" style="justify-content:center;">
+<div class="why-card">
+<h3>📧 Email</h3>
+<p>contact@petmatesadoption.org</p>
+</div>
+<div class="why-card">
+<h3>📞 Phone</h3>
+<p>+91-7926536320 / 0832-2241203</p>
+</div>
+<div class="why-card">
+<h3>📍Address</h3>
+<p>Plot No. 10, Fatorda Housing Board, Margao Goa</p>
+</div>
+</div>
+
+<h3 style="margin-top:50px;">Send Us a Message</h3>
+
+<form id="contactForm"  method="post"   onsubmit="return validateForm()">
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name" required>
+<small id="nameError" class="error"></small><br><br>
+
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required>
+<small id="emailError" class="error"></small><br><br>
+
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+<input type="submit" value="Send" class="btn">
+</form>
+
+<p id="successMsg" class="success" style="text-align:center;"></p>
+
+<script>
+function validateForm() {
+let valid = true;
+
+document.getElementById("nameError").innerHTML = "";
+document.getElementById("emailError").innerHTML = "";
+document.getElementById("successMsg").innerHTML = "";
+
+
+let name = document.getElementById("name").value.trim();
+let namePattern = /^[A-Za-z\s]+$/;
+if (name === "" || !namePattern.test(name)) {
+document.getElementById("nameError").innerHTML = "Name must contain only alphabets.";
+valid = false;}
+
+ 
+let email = document.getElementById("email").value.trim();
+let emailPattern = /^[A-Za-z0-9._%+-]+@gmail\.com$/i;
+if (email === "" || !emailPattern.test(email)) {
+document.getElementById("emailError").innerHTML = "Enter a valid Gmail address.";
+valid = false;}
+
+if (valid) {
+document.getElementById("successMsg").innerHTML = "Form successfully submitted!";
+document.getElementById("contactForm").reset(); 
+
+return false; }}
+</script>
+</section>
+<footer padding:20px; font-family:Arial, sans-serif;>
+<p style="font-size:18px; margin:5px 0;">🐾 Explore our pets and find your forever companion today.</p>
+<p>Follow us on:</p>
+<div style="margin:15px 0;">
+<a href="https://www.instagram.com" target="_blank">
+<img src="instalogo.jpeg" alt="Instagram" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.facebook.com" target="_blank">
+<img src="fbb.png" alt="Facebook" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+<img src="linkedin.png" alt="LinkedIn" width="30" style="margin:0 8px;">
+</a>
+</div>
+<p style="margin:10px 0; font-size:14px;">© 2025 PetMates | All Rights Reserved</p>
+</footer>
+<script>
+let currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".dropdown-content a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active"); 
+link.closest(".dropdown").querySelector(".dropbtn").classList.add("active"); }});
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active");}});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

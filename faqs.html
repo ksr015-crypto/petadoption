@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs - Pet Adoption</title>
+  <link rel="stylesheet" href="styling.css">
+<style>
+nav ul li a {
+  text-decoration: none;
+  color: white; 
+  padding: 8px 15px;
+  display: block;
+  transition: 0.3s;}
+
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: white;
+  color: #ff7f50; }
+
+
+nav ul li a.active {
+  background-color: #ff7f50;
+  color: white;
+  border-radius: 4px;}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;   
+  min-width: 160px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+
+.dropdown-content a {
+  color: #ff7f50;   
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;}
+
+.dropdown-content a:hover {
+  background-color: #ffe5d5;  
+  color: #ff7f50;}
+
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+
+.dropdown:hover > .dropbtn {
+  background-color: white;
+  color: #ff7f50;}
+
+.dropdown .dropbtn.active {
+  background-color: white;
+  color: #ff7f50;
+  border-radius: 4px;}
+
+ body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #fff3e0; 
+color: #333;}
+
+header {
+background-color: #ff7f50; 
+padding: 15px 0;}
+
+nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0;}
+
+nav ul li {
+position: relative;
+margin: 0 15px;}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+padding: 8px 12px;
+display: block;}
+
+nav ul li a:hover {
+background-color: #fdfcfa;
+border-radius: 5px;}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #fff3e0;
+min-width: 180px;
+z-index: 1;
+border-radius: 5px;
+overflow: hidden;}
+
+.dropdown-content a {
+color: #ff7f50;
+padding: 10px 15px;
+display: block;}
+
+.dropdown-content a:hover {
+background-color: #ffcc80;}
+
+.show { display: block; }
+
+.faq-section {
+max-width: 900px;
+margin: 40px auto;
+padding: 20px;}
+
+.faq-section h2 {
+color: #ff7f50;
+text-align: center;
+font-size: 2rem;
+margin-bottom: 30px;}
+
+.faq-item {
+background-color: #fff;
+border-radius: 10px;
+margin-bottom: 15px;
+padding: 15px 20px;
+cursor: pointer;
+border-left: 5px solid #ff7f50;
+transition: background 0.3s;}
+
+.faq-item:hover {
+background-color: #ffe0b2; }
+
+.faq-question {
+font-weight: bold;
+display: flex;
+justify-content: space-between;
+align-items: center;}
+
+.faq-answer {
+ margin-top: 10px;
+display: none;
+line-height: 1.5;}
+
+.faq-item.active .faq-answer {
+display: block; }
+
+.faq-item .icon {
+font-size: 1.2rem;
+color: #ff6f00;
+transition: transform 0.3s;}
+
+.faq-item.active .icon { 
+transform: rotate(45deg); }
+
+footer {
+background-color: #ff7f50;
+color: white;
+text-align: center;
+padding: 15px 0;
+margin-top: 30px;}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo"><a href="home.html"><b>🐾 PetMates</b></a></div>
+<ul>
+<li><a href="home.html" class="active">Home</a></li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Menu ▾</a>
+<div class="dropdown-content">
+<a href="adoption.html">Adoption Information</a>
+<a href="availablepets.html">Available Pets</a>
+<a href="stories.html">Success Stories</a>
+<a href="faqs.html">FAQs</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0)" class="dropbtn">Donate ▾</a>
+<div class="dropdown-content">
+<a href="adoptform.html">Adoption Form</a>
+<a href="donatepets.html">Donate Pets</a>
+</div>
+</li>
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="contactus.html">Contact Us</a></li>
+</ul>
+<a href="adoptform.html" class="btn adopt-btn">Adopt Now</a>
+</nav>
+</header>
+
+<div class="scroll-text">
+<p>🐾 Adopt don't Buy! Saving lives, one paw at a time. 🐾</p>
+</div>
+
+<section class="faq-section">
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<div class="faq-question">
+  1. How can I adopt a pet?
+<span class="icon">+</span>
+</div>
+<div class="faq-answer">
+  Visit our <a href="availablepets.html">Available Pets</a> page, choose a pet, and fill out the adoption form. Our team will contact you shortly.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+  2. What documents do I need to adopt?
+<span class="icon">+</span>
+</div>
+<div class="faq-answer">
+  A valid photo ID, proof of address, and basic information about your living situation are required.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+  3. Is there an adoption fee?
+<span class="icon">+</span>
+</div>
+<div class="faq-answer">
+  Adoption is free. Donations are appreciated to help rescue more animals.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+  4. Can I return a pet if it doesn’t work out?
+<span class="icon">+</span>
+</div>
+<div class="faq-answer">
+  We encourage patience and bonding, but if serious issues arise, you can safely return the pet to our shelter.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+  5. Do you have pets suitable for apartments?
+<span class="icon">+</span>
+</div>
+<div class="faq-answer">
+  Yes, we have cats and small dogs that adapt well to apartment living.
+</div>
+</div>
+</section>
+
+<script>
+  document.querySelectorAll('.dropbtn').forEach(button => {
+  button.addEventListener('click', e => {
+   e.preventDefault();
+const dropdown = button.nextElementSibling;
+dropdown.classList.toggle('show');}); });
+window.addEventListener('click', e => {
+if (!e.target.matches('.dropbtn')) {
+document.querySelectorAll('.dropdown-content').forEach(drop => {
+drop.classList.remove('show');}); }});
+
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+item.addEventListener('click', () => {
+item.classList.toggle('active');}); });
+</script>
+
+<footer padding:20px; font-family:Arial, sans-serif;>
+<p style="font-size:18px; margin:5px 0;">🐾 Explore our pets and find your forever companion today.</p>
+<p>Follow us on:</p>
+<div style="margin:15px 0;">
+<a href="https://www.instagram.com" target="_blank">
+<img src="instalogo.jpeg" alt="Instagram" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.facebook.com" target="_blank">
+<img src="fbb.png" alt="Facebook" width="30" style="margin:0 8px;">
+</a>
+<a href="https://www.linkedin.com" target="_blank">
+<img src="linkedin.png" alt="LinkedIn" width="30" style="margin:0 8px;">
+</a>
+</div>
+<p style="margin:10px 0; font-size:14px;">© 2025 PetMates | All Rights Reserved</p>
+</footer>
+<script>
+let currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".dropdown-content a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active"); 
+link.closest(".dropdown").querySelector(".dropbtn").classList.add("active"); }});
+
+document.querySelectorAll("nav ul li a").forEach(link => {
+if (link.getAttribute("href") === currentPage) {
+link.classList.add("active");}});
+
+</script>
+</body>
+</html>
